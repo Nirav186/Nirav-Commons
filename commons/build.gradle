@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.nirav.commons'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 24
@@ -49,7 +49,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.Nirav186'
                 artifactId = 'Nirav-Commons'
-                version = '0.0.7'
+                version = '0.0.8'
             }
         }
     }
