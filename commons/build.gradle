@@ -48,8 +48,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.Nirav186'
-                artifactId = 'commons'
-                version = '0.0.6'
+                artifactId = 'Nirav-Commons'
+                version = '0.0.7'
             }
         }
     }
