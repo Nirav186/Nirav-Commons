@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -38,5 +39,18 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation'com.google.android.ump:user-messaging-platform:2.2.0'
+    implementation 'com.google.android.ump:user-messaging-platform:2.2.0'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.Nirav186'
+                artifactId = 'commons'
+                version = '0.0.5'
+            }
+        }
+    }
 }
